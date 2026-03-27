@@ -15,33 +15,33 @@ class ProductController extends Controller
     }
 
     public function menu()
-    {
-        $allProducts = Product::all();
+{
+    $allProducts = Product::all();
 
-        $normalized = $allProducts->groupBy(function ($product) {
-            return Str::of($product->type ?? '')
-                ->lower()
-                ->trim()
-                ->replace('_', ' ')
-                ->replace('-', ' ')
-                ->toString();
-        });
+    $normalized = $allProducts->groupBy(function ($product) {
+        return Str::of($product->type ?? '')
+            ->lower()
+            ->trim()
+            ->replace('_', ' ')
+            ->replace('-', ' ')
+            ->toString();
+    });
 
-        $coffees    = $normalized->get('coffee', collect());
-        $drinks     = $normalized->get('drink', collect());
-        $desserts   = $normalized->get('dessert', collect());
-        $starters   = $normalized->get('starter', collect());
-        $mainDishes = $normalized->get('main dish', collect());
+    $coffees    = $normalized->get('coffee', collect());
+    $drinks     = $normalized->get('drink', collect());
+    $desserts   = $normalized->get('dessert', collect());
+    $starters   = $normalized->get('starter', collect());
+    $mainDishes = $normalized->get('main dish', collect());
 
-        return view('menu', compact(
-            'coffees',
-            'drinks',
-            'desserts',
-            'starters',
-            'mainDishes',
-            'allProducts'
-        ));
-    }
+    return view('menu', compact(
+        'coffees',
+        'drinks',
+        'desserts',
+        'starters',
+        'mainDishes',
+        'allProducts'
+    ));
+}
 
     public function show($id)
     {
