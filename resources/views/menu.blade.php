@@ -103,9 +103,22 @@
 
 @php
   $imagePath = function ($image) {
-      if (!$image) return asset('images/no-image.png');
-      return asset(str_starts_with($image, 'images/') ? $image : 'images/' . $image);
+      if (!$image) {
+          return asset('images/bg_1.jpg');
+      }
+
+      if (str_starts_with($image, 'images/')) {
+          return asset($image);
+      }
+
+      return asset('images/' . $image);
   };
+
+  $allEmpty = $coffees->isEmpty()
+      && $drinks->isEmpty()
+      && $desserts->isEmpty()
+      && $starters->isEmpty()
+      && $mainDishes->isEmpty();
 @endphp
 
 <section class="ftco-section">
@@ -132,7 +145,7 @@
             </div>
           </div>
         @empty
-          <p class="text-white">No desserts available.</p>
+          <p class="text-dark">No desserts available.</p>
         @endforelse
       </div>
 
@@ -157,7 +170,7 @@
             </div>
           </div>
         @empty
-          <p class="text-white">No drinks available.</p>
+          <p class="text-dark">No drinks available.</p>
         @endforelse
       </div>
 
@@ -182,7 +195,7 @@
             </div>
           </div>
         @empty
-          <p class="text-white">No starter items available.</p>
+          <p class="text-dark">No starter items available.</p>
         @endforelse
       </div>
 
@@ -207,7 +220,7 @@
             </div>
           </div>
         @empty
-          <p class="text-white">No main dish items available.</p>
+          <p class="text-dark">No main dish items available.</p>
         @endforelse
       </div>
     </div>
@@ -275,7 +288,7 @@
                       </div>
                     </div>
                   @empty
-                    <div class="col-12 text-center"><p class="text-white">No coffee items available.</p></div>
+                    <div class="col-12 text-center"><p class="text-dark">No coffee items available.</p></div>
                   @endforelse
                 </div>
               </div>
@@ -301,7 +314,7 @@
                       </div>
                     </div>
                   @empty
-                    <div class="col-12 text-center"><p class="text-white">No drink items available.</p></div>
+                    <div class="col-12 text-center"><p class="text-dark">No drink items available.</p></div>
                   @endforelse
                 </div>
               </div>
@@ -327,7 +340,7 @@
                       </div>
                     </div>
                   @empty
-                    <div class="col-12 text-center"><p class="text-white">No dessert items available.</p></div>
+                    <div class="col-12 text-center"><p class="text-dark">No dessert items available.</p></div>
                   @endforelse
                 </div>
               </div>
@@ -353,7 +366,7 @@
                       </div>
                     </div>
                   @empty
-                    <div class="col-12 text-center"><p class="text-white">No starter items available.</p></div>
+                    <div class="col-12 text-center"><p class="text-dark">No starter items available.</p></div>
                   @endforelse
                 </div>
               </div>
@@ -379,7 +392,7 @@
                       </div>
                     </div>
                   @empty
-                    <div class="col-12 text-center"><p class="text-white">No main dish items available.</p></div>
+                    <div class="col-12 text-center"><p class="text-dark">No main dish items available.</p></div>
                   @endforelse
                 </div>
               </div>
