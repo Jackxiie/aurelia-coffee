@@ -7,31 +7,30 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     public function home()
-    {
-        $products = Product::where('type', 'coffee')
-            ->where('status', 'active')
-            ->take(8)
-            ->get();
+{
+    $products = Product::where('type', 'coffee')
+        ->take(8)
+        ->get();
 
-        return view('home', compact('products'));
-    }
+    return view('home', compact('products'));
+}
 
-    public function menu()
-    {
-        $desserts = Product::where('type', 'dessert')->where('status', 'active')->get();
-        $drinks = Product::where('type', 'drink')->where('status', 'active')->get();
-        $starters = Product::where('type', 'starter')->where('status', 'active')->get();
-        $mainDishes = Product::where('type', 'main dish')->where('status', 'active')->get();
-        $coffees = Product::where('type', 'coffee')->where('status', 'active')->get();
+public function menu()
+{
+    $desserts = Product::where('type', 'dessert')->get();
+    $drinks = Product::where('type', 'drink')->get();
+    $starters = Product::where('type', 'starter')->get();
+    $mainDishes = Product::where('type', 'main dish')->get();
+    $coffees = Product::where('type', 'coffee')->get();
 
-        return view('menu', compact(
-            'desserts',
-            'drinks',
-            'starters',
-            'mainDishes',
-            'coffees'
-        ));
-    }
+    return view('menu', compact(
+        'desserts',
+        'drinks',
+        'starters',
+        'mainDishes',
+        'coffees'
+    ));
+}
 
     public function show($id)
     {
