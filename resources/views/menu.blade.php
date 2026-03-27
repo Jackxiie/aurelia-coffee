@@ -1,6 +1,11 @@
-@extends('layouts.app')
+@@extends('layouts.app')
 
 @section('content')
+
+<div style="background:red;color:white;padding:20px;font-size:30px;">
+    TEST MENU BLADE
+</div>
+
 <section class="home-slider owl-carousel">
   <div class="slider-item" style="background-image: url('{{ asset('images/bg_3.jpg') }}')" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
