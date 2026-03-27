@@ -212,18 +212,18 @@
         <h2 class="mb-4">Our Products</h2>
         <p>
           In a world where time slows down and every moment is meant to be savored, 
-          there exists a place where craftsmanship meets passion. 
+        there exists a place where craftsmanship meets passion. 
 
-          Far beyond the ordinary, where every detail is thoughtfully curated, 
-          we bring together the finest ingredients, the richest aromas, 
-          and an atmosphere designed for comfort and inspiration. 
+        Far beyond the ordinary, where every detail is thoughtfully curated, 
+        we bring together the finest ingredients, the richest aromas, 
+        and an atmosphere designed for comfort and inspiration. 
 
-          Here, coffee is not just a drink — it is an experience, 
-          a quiet escape from the rush of everyday life, 
-          and a celebration of taste, warmth, and connection. 
+        Here, coffee is not just a drink — it is an experience, 
+        a quiet escape from the rush of everyday life, 
+        and a celebration of taste, warmth, and connection. 
 
-          Welcome to a space where every sip tells a story, 
-          and every visit becomes a memory worth returning to.
+        Welcome to a space where every sip tells a story, 
+        and every visit becomes a memory worth returning to.
         </p>
       </div>
     </div>
